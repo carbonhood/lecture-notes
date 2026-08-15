@@ -1,0 +1,13 @@
+vault_path: ~/Obsidian Vault
+lectures_folder: Lectures
+watch_folder: ~/LectureRecordings
+whisper_model: small
+whisper_draft_model: base
+whisper_language: en
+llm_model: mistral
+chunk_seconds: 600
+save_transcript: true
+ffmpeg_preprocess: true
+moc_note: Lectures MOC
+serve_host: 0.0.0.0
+serve_port: 8787

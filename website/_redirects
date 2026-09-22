@@ -1,0 +1,2 @@
+# Netlify subdomain → custom domain (belt-and-suspenders with netlify.toml)
+https://barrettlemons.netlify.app/*  https://barrettlemons.com/:splat  301!

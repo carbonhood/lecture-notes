@@ -1,0 +1,22 @@
+# Force the custom domain as the only public origin.
+# In Netlify UI: Domain management → Options → "Set as primary domain" for barrettlemons.com
+# and enable "Domain aliases" so the Netlify subdomain redirects here.
+
+[[redirects]]
+  from = "https://barrettlemons.netlify.app/*"
+  to = "https://barrettlemons.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
